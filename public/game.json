@@ -1,0 +1,202 @@
+[
+  {
+    "id": "1",
+    "title": "PUBG: Battlegrounds",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/3/3d/PUBG_Logo.jpg",
+    "category": "FPS",
+    "downloadLink": "https://www.pubg.com",
+    "description": "A battle royale shooter where players fight to be the last one standing.",
+    "ratings": "4.5",
+    "developer": "Krafton"
+  },
+  {
+    "id": "2",
+    "title": "Call of Duty: Warzone",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/2/2c/Call_of_Duty_Warzone_cover_art.jpg",
+    "category": "FPS",
+    "downloadLink": "https://www.callofduty.com/warzone",
+    "description": "Free-to-play battle royale with intense combat and realistic weapons.",
+    "ratings": "4.6",
+    "developer": "Activision"
+  },
+  {
+    "id": "3",
+    "title": "Free Fire",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/6/6c/Garena_Free_Fire_logo.png",
+    "category": "Battle Royale",
+    "downloadLink": "https://ff.garena.com",
+    "description": "Fast-paced survival shooter optimized for mobile devices.",
+    "ratings": "4.4",
+    "developer": "Garena"
+  },
+  {
+    "id": "4",
+    "title": "Fortnite",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/0/09/Fortnite_cover_art.png",
+    "category": "Battle Royale",
+    "downloadLink": "https://www.epicgames.com/fortnite",
+    "description": "Build, shoot, and survive in a colorful battle royale world.",
+    "ratings": "4.7",
+    "developer": "Epic Games"
+  },
+  {
+    "id": "5",
+    "title": "Apex Legends",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/d/db/Apex_legends_cover.jpg",
+    "category": "FPS",
+    "downloadLink": "https://www.ea.com/games/apex-legends",
+    "description": "Hero-based battle royale with fast movement and teamwork.",
+    "ratings": "4.6",
+    "developer": "Respawn Entertainment"
+  },
+  {
+    "id": "6",
+    "title": "Valorant",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/5/5f/Valorant_cover_art.jpg",
+    "category": "FPS",
+    "downloadLink": "https://playvalorant.com",
+    "description": "Tactical 5v5 shooter with unique agent abilities.",
+    "ratings": "4.8",
+    "developer": "Riot Games"
+  },
+  {
+    "id": "7",
+    "title": "Counter-Strike 2",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/7/7f/Counter-Strike_2_cover_art.jpg",
+    "category": "FPS",
+    "downloadLink": "https://store.steampowered.com/app/730",
+    "description": "Classic competitive shooter with modern improvements.",
+    "ratings": "4.7",
+    "developer": "Valve"
+  },
+  {
+    "id": "8",
+    "title": "Minecraft",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png",
+    "category": "Sandbox",
+    "downloadLink": "https://www.minecraft.net",
+    "description": "Creative sandbox game with endless building possibilities.",
+    "ratings": "4.8",
+    "developer": "Mojang"
+  },
+  {
+    "id": "9",
+    "title": "GTA V",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png",
+    "category": "Action",
+    "downloadLink": "https://www.rockstargames.com/gta-v",
+    "description": "Open-world action game set in Los Santos.",
+    "ratings": "4.9",
+    "developer": "Rockstar Games"
+  },
+  {
+    "id": "10",
+    "title": "League of Legends",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/7/77/League_of_Legends_logo.png",
+    "category": "MOBA",
+    "downloadLink": "https://www.leagueoflegends.com",
+    "description": "Popular multiplayer online battle arena game.",
+    "ratings": "4.6",
+    "developer": "Riot Games"
+  },
+  {
+    "id": "11",
+    "title": "Dota 2",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/3/31/Dota_2_Steam_artwork.jpg",
+    "category": "MOBA",
+    "downloadLink": "https://www.dota2.com",
+    "description": "Deep strategy-based competitive MOBA game.",
+    "ratings": "4.7",
+    "developer": "Valve"
+  },
+  {
+    "id": "12",
+    "title": "Clash of Clans",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/5/59/Clash_of_Clans_Logo.png",
+    "category": "Strategy",
+    "downloadLink": "https://supercell.com/en/games/clashofclans/",
+    "description": "Build villages, train armies, and battle others.",
+    "ratings": "4.5",
+    "developer": "Supercell"
+  },
+  {
+    "id": "13",
+    "title": "Clash Royale",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/8/8e/Clash_Royale_logo.png",
+    "category": "Strategy",
+    "downloadLink": "https://supercell.com/en/games/clashroyale/",
+    "description": "Real-time multiplayer strategy card game.",
+    "ratings": "4.4",
+    "developer": "Supercell"
+  },
+  {
+    "id": "14",
+    "title": "Among Us",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/9/9a/Among_Us_cover_art.jpg",
+    "category": "Party",
+    "downloadLink": "https://www.innersloth.com/games/among-us/",
+    "description": "Social deduction game set in space.",
+    "ratings": "4.3",
+    "developer": "Innersloth"
+  },
+  {
+    "id": "15",
+    "title": "Roblox",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/1/1e/Roblox_Logo_2022.svg",
+    "category": "Sandbox",
+    "downloadLink": "https://www.roblox.com",
+    "description": "Platform to create and play user-generated games.",
+    "ratings": "4.4",
+    "developer": "Roblox Corporation"
+  },
+  {
+    "id": "16",
+    "title": "Genshin Impact",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/5/5d/Genshin_Impact_cover.jpg",
+    "category": "RPG",
+    "downloadLink": "https://genshin.hoyoverse.com",
+    "description": "Open-world action RPG with anime-style graphics.",
+    "ratings": "4.6",
+    "developer": "HoYoverse"
+  },
+  {
+    "id": "17",
+    "title": "Elden Ring",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/b/b9/Elden_Ring_Box_art.jpg",
+    "category": "RPG",
+    "downloadLink": "https://en.bandainamcoent.eu/elden-ring",
+    "description": "Challenging open-world fantasy action RPG.",
+    "ratings": "4.9",
+    "developer": "FromSoftware"
+  },
+  {
+    "id": "18",
+    "title": "FIFA 23",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/6/6a/FIFA_23_Cover.jpg",
+    "category": "Sports",
+    "downloadLink": "https://www.ea.com/games/fifa/fifa-23",
+    "description": "Realistic football simulation game.",
+    "ratings": "4.5",
+    "developer": "EA Sports"
+  },
+  {
+    "id": "19",
+    "title": "Need for Speed Unbound",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/9/9d/NFS_Unbound_cover.jpg",
+    "category": "Racing",
+    "downloadLink": "https://www.ea.com/games/need-for-speed/need-for-speed-unbound",
+    "description": "Stylish street racing experience.",
+    "ratings": "4.3",
+    "developer": "Criterion Games"
+  },
+  {
+    "id": "20",
+    "title": "Cyberpunk 2077",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/9/9f/Cyberpunk_2077_box_art.jpg",
+    "category": "RPG",
+    "downloadLink": "https://www.cyberpunk.net",
+    "description": "Futuristic open-world RPG set in Night City.",
+    "ratings": "4.6",
+    "developer": "CD Projekt Red"
+  }
+]
