@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router";
 import Container from "../Container";
 import logo from "../../assets/gaming-black-logo-template-hd-png-701751694705830g7fpxbx1af-removebg-preview.png";
 import "./Navbar.css";
+import { AuthContext } from "../AuthContainer/AuthContext";
 const Navbar = () => {
+  const { user } = useContext(AuthContext);
   const link = (
     <>
       <NavLink to={"/"}>Home</NavLink>
@@ -46,9 +48,13 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1 gap-6">{link}</ul>
         </div>
         <div className="navbar-end">
-          <Link to={"/auth/login"} className="btn">
-            Login
-          </Link>
+          {user ? (
+            <button className="btn">SingOut</button>
+          ) : (
+            <Link to={"/auth/login"} className="btn">
+              Login
+            </Link>
+          )}
         </div>
       </div>
     </Container>
