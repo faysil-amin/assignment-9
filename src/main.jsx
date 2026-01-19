@@ -11,6 +11,7 @@ import About from "./Component/About/About";
 import Auth from "./Layout/Auth";
 import Login from "./Component/Login/Login";
 import Register from "./Component/Register/Register";
+import Read from "./Component/Read/Read";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
       {
         index: true,
         Component: Home,
+        loader: () => fetch("../game.json"),
       },
     ],
   },
@@ -33,6 +35,11 @@ const router = createBrowserRouter([
   {
     path: "*",
     Component: ErroPage,
+  },
+  {
+    path: "/read/:id",
+    loader: () => fetch("../game.json"),
+    Component: Read,
   },
   {
     path: "/auth",
