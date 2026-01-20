@@ -13,6 +13,7 @@ import Login from "./Component/Login/Login";
 import Register from "./Component/Register/Register";
 import Read from "./Component/Read/Read";
 import AuthProvider from "./Component/AuthContainer/AuthProvider";
+import PrivetRoute from "./Component/PrivetRoute/PrivetRoute";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -40,7 +41,11 @@ const router = createBrowserRouter([
   {
     path: "/read/:id",
     loader: () => fetch("../game.json"),
-    Component: Read,
+    element: (
+      <PrivetRoute>
+        <Read></Read>
+      </PrivetRoute>
+    ),
   },
   {
     path: "/auth",

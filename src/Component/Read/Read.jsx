@@ -24,15 +24,15 @@ const Read = () => {
   return (
     <div className="my-8">
       <Container>
-        <div className="grid grid-cols-12 gap-8">
-          <div className="col-span-6 border">
+        <div className="grid mt-8 md:mt-0 md:grid-cols-2 gap-8">
+          <div className="border">
             <img
-              className="h-[500px] w-full bg-contain"
+              className="h-[500px] w-full bg-contain "
               src={coverPhoto}
               alt=""
             />
           </div>
-          <div className="col-span-6">
+          <div className="">
             <div className="flex justify-end">
               <button className="btn btn-primary">
                 <a href={downloadLink}>Downlode</a>

@@ -4,8 +4,10 @@ import Container from "../Container";
 import logo from "../../assets/gaming-black-logo-template-hd-png-701751694705830g7fpxbx1af-removebg-preview.png";
 import "./Navbar.css";
 import { AuthContext } from "../AuthContainer/AuthContext";
+import userlogo from "../../assets/user.png";
 const Navbar = () => {
   const { user, singOut } = useContext(AuthContext);
+  console.log(user);
   const link = (
     <>
       <NavLink to={"/"}>Home</NavLink>
@@ -52,7 +54,18 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-6">{link}</ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end flex items-center gap-4">
+          <div>
+            {user ? (
+              <img
+                className="h-13 w-13 rounded-[50%] border-2 border-orange-500 p-1"
+                src={user.photoURL}
+                alt=""
+              />
+            ) : (
+              <img src={userlogo} alt="" />
+            )}
+          </div>
           {user ? (
             <button onClick={logOut} className="btn">
               SingOut

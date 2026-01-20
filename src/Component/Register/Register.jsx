@@ -2,10 +2,11 @@ import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../AuthContainer/AuthContext";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import Container from "../Container";
 
 const Register = () => {
   const navigate = useNavigate();
-  const { creatUser, setUser } = useContext(AuthContext);
+  const { creatUser, setUser, userProfile } = useContext(AuthContext);
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
   const [show, SetShow] = useState(false);
@@ -37,17 +38,25 @@ const Register = () => {
     setSuccess("");
     creatUser(email, password)
       .then((res) => {
-        setUser(res);
+        userProfile({
+          displayName: name,
+          photoURL: url,
+        })
+          .then(() => {
+            setUser({ ...res, displayName: name, photoURL: url });
+            navigate("/");
+          })
+          .catch(() => {});
+
         setSuccess("Form submit successful");
-        navigate("/");
       })
       .catch((error) => {
         console.log(error);
         alert("email already exist");
       });
   };
-  return (
-    <form onSubmit={handleForm}>
+  return <Container>
+        <form onSubmit={handleForm}>
       <div className="flex items-center justify-center h-screen">
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
           <div className="card-body">
@@ -108,7 +117,7 @@ const Register = () => {
         </div>
       </div>
     </form>
-  );
+  </Container>;
 };
 
 export default Register;
