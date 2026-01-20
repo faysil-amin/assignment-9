@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router";
 
 const Login = () => {
+  const [show, SetShow] = useState(false);
+  const handleShow = () => {
+    if (show) {
+      SetShow(false);
+    } else {
+      SetShow(true);
+    }
+  };
   return (
     <form>
       <div className="flex items-center justify-center h-screen">
@@ -16,12 +25,18 @@ const Login = () => {
                 placeholder="Email"
               />
               <label className="label">Password</label>
-              <input
-                name="password"
-                type="password"
-                className="input"
-                placeholder="Password"
-              />
+              <div className="relative">
+                <input
+                  name="password"
+                  type={show ? "text" : "password"}
+                  className="input"
+                  placeholder="Password"
+                  required
+                />
+                <div onClick={handleShow} className="absolute right-8 top-3.5">
+                  {show ? <FaEyeSlash /> : <FaEye />}
+                </div>
+              </div>
               <div>
                 <a className="link link-hover">Forgot password?</a>
               </div>

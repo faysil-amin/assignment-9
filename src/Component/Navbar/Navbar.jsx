@@ -5,7 +5,7 @@ import logo from "../../assets/gaming-black-logo-template-hd-png-701751694705830
 import "./Navbar.css";
 import { AuthContext } from "../AuthContainer/AuthContext";
 const Navbar = () => {
-  const { user } = useContext(AuthContext);
+  const { user, singOut } = useContext(AuthContext);
   const link = (
     <>
       <NavLink to={"/"}>Home</NavLink>
@@ -13,6 +13,11 @@ const Navbar = () => {
       <NavLink to={"/about"}>About</NavLink>
     </>
   );
+  const logOut = () => {
+    singOut()
+      .then(() => {})
+      .catch((error) => {});
+  };
   return (
     <Container>
       <div className="navbar">
@@ -49,7 +54,9 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           {user ? (
-            <button className="btn">SingOut</button>
+            <button onClick={logOut} className="btn">
+              SingOut
+            </button>
           ) : (
             <Link to={"/auth/login"} className="btn">
               Login

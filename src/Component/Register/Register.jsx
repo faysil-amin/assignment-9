@@ -1,12 +1,23 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../AuthContainer/AuthContext";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
+  const navigate = useNavigate();
   const { creatUser, setUser } = useContext(AuthContext);
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
+  const [show, SetShow] = useState(false);
+  const handleShow = () => {
+    if (show) {
+      SetShow(false);
+    } else {
+      SetShow(true);
+    }
+  };
   const handleForm = (e) => {
     e.preventDefault();
-    const [error, setError] = useState("");
     const name = e.target.name.value;
     const url = e.target.url.value;
     const email = e.target.email.value;
@@ -16,20 +27,23 @@ const Register = () => {
     const specilCheck = /^(?=.*[@$!%*?&]).+$/;
 
     if (!passwordLengthCheck.test(password)) {
-      setError("password lenght must be 6");
-      return;
+      return setError("password lenght must be 6");
     } else if (!letterCheck.test(password)) {
-      setError("one Upper & Lower case");
-      return;
-    } else if (specilCheck.test(password)) {
-      setError("Password must include (e.g., @$!%*?&).");
+      return setError("one Upper & Lower case");
+    } else if (!specilCheck.test(password)) {
+      return setError("Password must include (e.g., @$!%*?&).");
     }
+    setError("");
+    setSuccess("");
     creatUser(email, password)
       .then((res) => {
         setUser(res);
+        setSuccess("Form submit successful");
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);
+        alert("email already exist");
       });
   };
   return (
@@ -63,13 +77,19 @@ const Register = () => {
                 required
               />
               <label className="label">Password</label>
-              <input
-                name="password"
-                type="password"
-                className="input"
-                placeholder="Password"
-                required
-              />
+              <div className="relative">
+                <input
+                  name="password"
+                  type={show ? "text" : "password"}
+                  className="input"
+                  placeholder="Password"
+                  required
+                />
+                <div onClick={handleShow} className="absolute right-8 top-3.5">
+                  {show ? <FaEyeSlash /> : <FaEye />}
+                </div>
+              </div>
+              {error && <p className="text-red-500">{error}</p>}
               <button type="submit" className="btn btn-neutral mt-4">
                 Register
               </button>
@@ -82,6 +102,7 @@ const Register = () => {
                   Login
                 </Link>
               </p>
+              {success && <p className="text-green-500">{success}</p>}
             </fieldset>
           </div>
         </div>
