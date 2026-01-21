@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../assets/gaming-black-logo-template-hd-png-701751694705830g7fpxbx1af-removebg-preview.png";
 const Footer = () => {
   return (
-    <div>
+    <div className="mt-12">
       <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
         <aside>
           <img className="h-30 w-30" src={logo} alt="" />

@@ -7,7 +7,7 @@ import { AuthContext } from "../AuthContainer/AuthContext";
 import userlogo from "../../assets/user.png";
 const Navbar = () => {
   const { user, singOut } = useContext(AuthContext);
-  console.log(user);
+  // console.log(user);
   const link = (
     <>
       <NavLink to={"/"}>Home</NavLink>
@@ -18,7 +18,7 @@ const Navbar = () => {
   const logOut = () => {
     singOut()
       .then(() => {})
-      .catch((error) => {});
+      .catch(() => {});
   };
   return (
     <Container>
