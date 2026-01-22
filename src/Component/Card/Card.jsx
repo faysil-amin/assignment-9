@@ -1,18 +1,8 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router";
-import { motion } from "motion/react";
 const Card = ({ res }) => {
-  const {
-    id,
-    title,
-    coverPhoto,
-    category,
-    downloadLink,
-    description,
-    ratings,
-    developer,
-  } = res;
+  const { id, coverPhoto, description, title } = res;
   return (
     <div>
       <div className="card bg-base-100 shadow-sm h-full">
@@ -20,7 +10,7 @@ const Card = ({ res }) => {
           <img className="h-80 w-70 bg-cover" src={coverPhoto} alt="Shoes" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">Card Title</h2>
+          <h2 className="card-title">{title}</h2>
           <p className="line-clamp-2">{description}</p>
           <div className="card-actions justify-end">
             <Link

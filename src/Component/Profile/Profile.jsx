@@ -3,6 +3,7 @@ import { AuthContext } from "../AuthContainer/AuthContext";
 import Container from "../Container";
 import logo from "../../assets/user.png";
 import { Link } from "react-router";
+import Navbar from "../Navbar/Navbar";
 const Profile = () => {
   const [updateProfile, setUpdateProfile] = useState(false);
 
@@ -28,6 +29,7 @@ const Profile = () => {
   // const { displayName, photoURL, email, emailVerified } = user;
   return (
     <Container>
+      <Navbar></Navbar>
       <div className=" flex items-center justify-center flex-col gap-4 h-screen">
         <div>
           {user && user ? (
@@ -63,7 +65,7 @@ const Profile = () => {
         )}
         {updateProfile && (
           <form onSubmit={handleSubmit}>
-            <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <div className="card bg-base-100 shrink-0 shadow-2xl">
               <div className="card-body">
                 <fieldset className="fieldset">
                   {/* name */}
